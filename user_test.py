@@ -57,13 +57,13 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.newCredential.accountName,"facebook")
         self.assertEqual(self.newCredential.password,"pwd222")
 
-    # def test_saveCredential(self):
-    #     '''
-    #     test_saveCredential test case to test if the credential object is saved into the credential_list
-    #     '''
+    def test_saveCredential(self):
+        '''
+        test_saveCredential test case to test if the credential object is saved into the credential_list
+        '''
 
-    #     self.newCredential.saveCredential() 
-    #     self.assertEqual(len(Credential.credential_list),1)    
+        self.newCredential.saveCredential() 
+        self.assertEqual(len(Credential.credential_list),1)    
 
 if __name__=='__main__': # provides a command line interface that collects all the tests methods and executes them
     unittest.main()

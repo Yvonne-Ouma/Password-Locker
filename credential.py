@@ -10,3 +10,11 @@ class Credential:
         self.lastName = lastName
         self.accountName = accountName
         self.password = password
+
+    def saveCredential(self):
+
+        '''
+        saveCredential method saves contacts objects into credential_list
+        '''
+
+        Credential.credential_list.append(self)    
