@@ -7,7 +7,7 @@ This application will help a user to save their details like their password. For
 ### Setup Instruction
 To start using this project use the following commands:
 
-* git clone https://github.com/Yvonne-Ouma/Password-Locker.git
+* git clone ```https://github.com/Yvonne-Ouma/Password-Locker.git```
 
 * cd Password-Locker
 
@@ -26,4 +26,4 @@ None that i know  of.
 Python3.6
 
 ### Contacts
-For more information or challenges about my application you can locate me through my imail address yvonneouma98@gmail.com
+For more information or challenges about my application you can locate me through my imail address ```yvonneouma98@gmail.com```
