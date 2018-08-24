@@ -16,8 +16,8 @@ To start using this project use the following commands:
 * This requires you to have a command line.like the Terminal where you can code in the above commands.
 
 ### Prerequisites
-web browser
-git
+* web browser
+* git
 
 ### Bugs
 None that i know  of.
