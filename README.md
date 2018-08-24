@@ -21,6 +21,7 @@ To start using this project use the following commands:
 
 ### Bugs
 None that i know  of.
+
 ## Technologies used
 Python3.6
 
