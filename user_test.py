@@ -1,6 +1,8 @@
 import unittest # Importing the unittest module
-from user import User # Importing the user class
-from credential import Credential # importing the credential class
+import pyperclip,sys
+from user import User
+from credential import Credential# Importing the user and credential class
+
 
 class TestUser(unittest.TestCase):
     '''
@@ -114,8 +116,8 @@ class TestCredential(unittest.TestCase):
         self.newCredential.saveCredential()
         testCredential = Credential("MaryLucky","Haron","twitter","12pass")
         testCredential.saveCredential()
-        foundCredential = Credential.find_by_name("Haron")
-        self.assertEqual(foundCredential.lastName, testCredential.lastName)  
+        foundCredential = Credential.find_by_name("MaryLucky")
+        self.assertEqual(foundCredential.accountName, testCredential.accountName)  
 
     def testCredential_exists(self):
         '''
@@ -133,7 +135,18 @@ class TestCredential(unittest.TestCase):
         method that returns a list of all contacts saved
         '''
 
-        self.assertEqual(Credential.displayCredentials(), Credential.credential_list)       
+        self.assertEqual(Credential.displayCredentials(), Credential.credential_list) 
+
+    def test_copy_accountName(self):
+        '''
+        test to confirm that we are copying the account from a found credential
+        '''
+
+        self.newCredential.saveCredential()
+        Credential.copy_accountName("Diana")
+
+        self.assertEqual(self.newCredential.accountName, pyperclip.paste())
+          
 
            
 

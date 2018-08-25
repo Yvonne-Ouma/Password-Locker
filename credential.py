@@ -1,4 +1,5 @@
-import pyperclip
+import  pyperclip, sys
+
 class Credential:
     
     '''
@@ -38,7 +39,7 @@ class Credential:
         Credential of person that matches the number
         '''   
         for credential in cls.credential_list:
-            if credential.lastName == name:
+            if credential.firstName == name:
                 return credential
 
     @classmethod
@@ -63,13 +64,7 @@ class Credential:
         '''
         return cls.credential_list  
 
-    
-    def test_copy_lastName(self):
-        '''
-        test to confirm that we are copying the lastName from a found credential
-        '''
-
-        seif.new_credential.saveCredential()
-        Credential.copy_lastName("Haron")
-
-        self.assertEqual(self.newCredential.lastName, pyperclip.paste())
+    @classmethod 
+    def copy_accountName(cls,name):
+        credential_found = Credential.find_by_name(name)
+        pyperclip.copy(credential_found.accountName)
