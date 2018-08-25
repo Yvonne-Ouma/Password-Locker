@@ -1,4 +1,6 @@
+import pyperclip
 class Credential:
+    
     '''
     Class that generates new instances of credentials
     '''
@@ -59,4 +61,15 @@ class Credential:
         '''
         method that returns the credential list
         '''
-        return cls.credential_list    
+        return cls.credential_list  
+
+    
+    def test_copy_lastName(self):
+        '''
+        test to confirm that we are copying the lastName from a found credential
+        '''
+
+        seif.new_credential.saveCredential()
+        Credential.copy_lastName("Haron")
+
+        self.assertEqual(self.newCredential.lastName, pyperclip.paste())
