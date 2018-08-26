@@ -15,3 +15,10 @@ def saveUsers(user):
     '''
 
     user.saveUser() 
+
+def delCredential(credential):
+    '''
+    Function to delete a credential
+    '''
+
+    credential.deleteCredential()
