@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from user import User
+from credential import Credential
 
 def createUser(userName,password):
     '''
@@ -16,9 +17,11 @@ def saveUsers(user):
 
     user.saveUser() 
 
-def delCredential(credential):
+def saveCredentials(credential):
     '''
-    Function to delete a credential
+    Function to save a new credential
     '''
 
-    credential.deleteCredential()
+    credential.saveCredential()
+
+    
