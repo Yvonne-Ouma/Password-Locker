@@ -38,7 +38,7 @@ def findCredential(name):
 
     return Credential.find_by_name(name)
 
-def check_existingCredentials(number):
+def check_existingCredentials(name):
     '''
     Function that checks if a credential exists with that name and return a boolean
     '''
@@ -52,6 +52,28 @@ def displayCredentials():
 
     return Credential.displayCredentials()
 
+def main():
+    print("Hello welcome to Password locker.What is your name?")
+            userName = input()
+            password = input()
+
+            print(f"Hello {userName}. what would you like to do?" )
+            print('/n')
+
+            while True:
+                print("Us this short codes : cc - Create a new credential, dc -display credentials, fc a contact, ex -exit the credential list ")
+                
+                if short_code == 'cc':
+                        print("New Credential")
+                        print("-"*10)
+
+                        print ("firstName ....")
+                        fName = input()
+
+                        print("lastName ...")
+                        lName = input()
+
+                        print("")
 
 
 
