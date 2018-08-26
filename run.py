@@ -30,6 +30,29 @@ def delCredential(credential):
     '''
 
     credential.deleteCredential()
-    
-       
+
+def findCredential(name):
+    '''
+    Function that finds a credential by name returns the credential
+    '''
+
+    return Credential.find_by_name(name)
+
+def check_existingCredentials(number):
+    '''
+    Function that checks if a credential exists with that name and return a boolean
+    '''
+
+    return Credential.credential_exist(name)
+
+def displayCredentials():
+    '''
+    Function that returns all the saved credentials
+    '''
+
+    return Credential.displayCredentials()
+
+
+
+
 
