@@ -38,7 +38,7 @@ class Credential:
         Returns :
         Credential of person that matches the number
         '''   
-        for credential in cls.credential_list:
+        for credential in Credential.credential_list:
             if credential.firstName == name:
                 return credential
 
