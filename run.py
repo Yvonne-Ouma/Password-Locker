@@ -65,7 +65,7 @@ def main():
     print(f"Hello {userName}. what would you like to do??\n" )
 
     while True:
-        print("Us this short codes : cc - Create a new credential, dc -display credentials, fc a credential, ex -exit the credential list ")
+        print("Us this short codes : cc - Create a new credential, dc -display credentials, fc to search a credential, ex -exit the credential list ")
         short_code = input()
 
         if short_code == 'cc':
@@ -109,16 +109,12 @@ def main():
 
                 print("Enter the name you want to search for") 
 
-                searchName = input()  
-                if check_existingCredentials(searchName):
-                        searchCredential = findCredential(searchName)
-                        print(f"{searchCredential.firstName} {searchCredential.lastName}")
+                searchName = input() 
+                searchCredential = findCredential(searchName)
+                print(f"{searchCredential.firstName} {searchCredential.lastName}")
+                print('-' * 20)
+                print(f"accountName........{searchCredential.accountName}")
 
-                        print('-' * 20)
-                        print(f"accountName........{searchCredential.accountName}")
-
-                else:
-                        print("That credential does not exist") 
 
         elif short_code == "ex":
                 print("Bye ......")   
