@@ -57,15 +57,16 @@ def displayCredentials():
     return Credential.displayCredentials()
 
 def main():
-    print("Hello Welcome to password locker.")
+    print("Hello Welcome to password locker.\n Login:")
     userName = input("What is your name?")
     password = input("Enter your password :")
             
 
-    print(f"Hello {userName}. what would you like to do??\n" )
+    print(f"Hello {userName}. what would you like to do??\n Create an acount First!!" )
+    print("-"* 15)
 
     while True:
-        print("Us this short codes : cc - Create a new credential, dc -display credentials, fc to search a credential, ex -exit the credential list ")
+        print("Us this short codes : cc - Create a new credential, dc -display credentials, fc -to search a credential, dl -to delete credential, ex -exit the credential list ")
         short_code = input()
 
         if short_code == 'cc':
@@ -88,7 +89,7 @@ def main():
                 saveCredential(createCredential(firstName,lastName,accountName,password)) # create and save new credential.
 
                 print('\n')
-                print (f"New Credential {firstName} {lastName} created")
+                # print (f'New Credential {firstName} {lastName} {accountName} created')
                 print('\n')
 
         elif short_code == 'dc':
@@ -103,7 +104,17 @@ def main():
                 else:
                         print('\n')
                         print("You dont seem to have any credentials saved yet")
-                        print('\n')             
+                        print('\n') 
+
+        elif short_code =='dl':
+                print("Are your sure you want to delete this credential\n Please insert the name of the credential:")
+                searchName = input()
+                deleteCredential = Credential.deleteCredential(searchName)
+
+
+
+                
+
 
         elif short_code == 'fc':
 
@@ -111,7 +122,7 @@ def main():
 
                 searchName = input() 
                 searchCredential = findCredential(searchName)
-                print(f"{searchCredential.firstName} {searchCredential.lastName}")
+                print(f" {searchCredential.lastName}")
                 print('-' * 20)
                 print(f"accountName........{searchCredential.accountName}")
 

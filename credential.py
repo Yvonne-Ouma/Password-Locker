@@ -21,13 +21,14 @@ class Credential:
         '''
 
         Credential.credential_list.append(self)   
-
-    def deleteCredential(self):
+    @classmethod
+    def deleteCredential(cls,name):
         '''
         deleteCredential method deletes a saved credential from the credential_list
         '''
-
-        Credential.credential_list.remove(self)
+        for obj in cls.credential_list:
+            if obj.firstName == name:
+                cls.credential_list.remove(obj)
     @classmethod
     def find_by_name(cls,name):
         '''
@@ -39,7 +40,7 @@ class Credential:
         Credential of person that matches the number
         '''   
         for credential in Credential.credential_list:
-            if credential.firstName == name:
+            if credential.lastName == name:
                 return credential
 
     @classmethod
